@@ -1,0 +1,10 @@
+services:
+  syncio:
+    image: syncio:latest
+    container_name: syncio
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    volumes:
+      - ~/syncio/files:/sync.io-cache
+
