@@ -18,13 +18,8 @@ ENV GO111MODULE=on
 
 # Build for all supported platforms
 RUN chmod +x build.bash
-RUN ./build.bash 
+RUN ./build.bash
 RUN go build .
-
-# Expose the port that the application will run on
-# Replace 8080 with the actual port number specified in the README
-# EXPOSE 8080
 
 # Set the entrypoint to run the application
 ENTRYPOINT ["./Sync.io"]
-
